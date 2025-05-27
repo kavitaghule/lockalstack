@@ -1,0 +1,8 @@
+python3 app.py
+docker run --rm -it -p 4566:4566 --network host -d \
+  -e SERVICES=apigateway,cloudwatch,logs \
+  -e DEBUG=1 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  localstack/localstack
+curl http://localhost:4566/restapis/vm5mfqgslm/dev/_user_request_/hello
+curl http://localhost:3000/hello
