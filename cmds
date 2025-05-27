@@ -6,3 +6,9 @@ docker run --rm -it -p 4566:4566 --network host -d \
   localstack/localstack
 curl http://localhost:4566/restapis/vm5mfqgslm/dev/_user_request_/hello
 curl http://localhost:3000/hello
+terraform init
+terraform apply --auto-approve
+
+
+
+
