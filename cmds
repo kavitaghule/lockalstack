@@ -1,6 +1,6 @@
 python3 app.py
 docker run --rm -it -p 4566:4566 --network host -d \
-  -e SERVICES=apigateway,cloudwatch,logs \
+  -e SERVICES=apigateway,cloudformation,dynamodb,rds,ec2,ecs,eks,efs,ebs,vpc,iam,route53,cloudfront,cloudwatch,s3 \
   -e DEBUG=1 \
   -v /var/run/docker.sock:/var/run/docker.sock \
   localstack/localstack
